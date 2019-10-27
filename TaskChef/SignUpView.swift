@@ -18,7 +18,7 @@ struct SignUpView: View {
     @EnvironmentObject var session: SessionStore
     
     func signUp () {
-        print("sign up")
+        print("sign up worked")
         loading = true
         error = false
         session.signUp(email: email, password: password) { (result, error) in
