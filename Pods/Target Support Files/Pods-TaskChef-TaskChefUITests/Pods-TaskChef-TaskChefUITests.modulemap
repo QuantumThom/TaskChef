@@ -1,0 +1,6 @@
+framework module Pods_TaskChef_TaskChefUITests {
+  umbrella header "Pods-TaskChef-TaskChefUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

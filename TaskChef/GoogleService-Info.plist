@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>935173872693-kl6c635tf7ea9ncbijn7ojv9cpk43ojg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.935173872693-kl6c635tf7ea9ncbijn7ojv9cpk43ojg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDeTST-86oYqbBCNqNyhH_-xYCGBAd2Gig</string>
+	<key>GCM_SENDER_ID</key>
+	<string>935173872693</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ThomasBahmandeji.TaskChef</string>
+	<key>PROJECT_ID</key>
+	<string>taskwheel</string>
+	<key>STORAGE_BUCKET</key>
+	<string>taskwheel.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:935173872693:ios:4129a59832cc9819e9257c</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.935173872693-kl6c635tf7ea9ncbijn7ojv9cpk43ojg</string>
+			</array>
+		</dict>
+	</array>
+	<key>DATABASE_URL</key>
+	<string>https://taskwheel.firebaseio.com</string>
+</dict>
+</plist>
