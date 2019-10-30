@@ -7,9 +7,16 @@
 //
 
 import SwiftUI
-
+import PushKit
 struct SettingsView: View {
     var body: some View{
-        Text("Settings")
+        VStack{
+            Button(action: {}){
+                HStack {
+                    Text("Push Notifications")
+                    //Image(systemName: "")
+                }
+            }
+        }
     }
 }

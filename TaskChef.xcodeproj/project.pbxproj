@@ -71,6 +71,16 @@
 		0A00DD1A23593DCA00633FCF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		0A00DD1C23593E2500633FCF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0A00DD1E23593E4100633FCF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		0A035B2E236688CB0086E3E5 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		0A035B2F236688CB0086E3E5 /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@2x.png"; sourceTree = "<group>"; };
+		0A035B30236688CB0086E3E5 /* Icon-20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-20@3x.png"; sourceTree = "<group>"; };
+		0A035B31236688CB0086E3E5 /* Icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@3x.png"; sourceTree = "<group>"; };
+		0A035B32236688CC0086E3E5 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		0A035B33236688CC0086E3E5 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		0A035B34236688CC0086E3E5 /* ios-marketing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-marketing.png"; sourceTree = "<group>"; };
+		0A035B35236688CC0086E3E5 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		0A035B36236688CC0086E3E5 /* Icon-20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-20@2x.png"; sourceTree = "<group>"; };
+		0A035B3723668DF70086E3E5 /* TaskChef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskChef.entitlements; sourceTree = "<group>"; };
 		0A4DEDF2235FCE5E00652B9A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0A4DEDF4235FD1FE00652B9A /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelpView.swift; path = TaskChef/ProfileViews/HelpView.swift; sourceTree = SOURCE_ROOT; };
 		0A8AD8512361322000C13680 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -142,6 +152,8 @@
 		0A00DCE523593D5900633FCF /* TaskChef */ = {
 			isa = PBXGroup;
 			children = (
+				0A035B3723668DF70086E3E5 /* TaskChef.entitlements */,
+				0A035B2D236688C20086E3E5 /* Images */,
 				0AF9EF61235C05C5007BAF48 /* Delegates */,
 				0A00DCEA23593D5900633FCF /* ContentView.swift */,
 				0A00DD1823593DA600633FCF /* SignInView.swift */,
@@ -187,6 +199,22 @@
 				0A00DD0A23593D5C00633FCF /* Info.plist */,
 			);
 			path = TaskChefUITests;
+			sourceTree = "<group>";
+		};
+		0A035B2D236688C20086E3E5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0A035B36236688CC0086E3E5 /* Icon-20@2x.png */,
+				0A035B30236688CB0086E3E5 /* Icon-20@3x.png */,
+				0A035B2F236688CB0086E3E5 /* Icon-29@2x.png */,
+				0A035B31236688CB0086E3E5 /* Icon-29@3x.png */,
+				0A035B2E236688CB0086E3E5 /* Icon-40@2x.png */,
+				0A035B32236688CC0086E3E5 /* Icon-40@3x.png */,
+				0A035B33236688CC0086E3E5 /* Icon-60@2x.png */,
+				0A035B35236688CC0086E3E5 /* Icon-60@3x.png */,
+				0A035B34236688CC0086E3E5 /* ios-marketing.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		0AE8B971235FDB36000C2227 /* ProfileViews */ = {
@@ -687,16 +715,18 @@
 			baseConfigurationReference = C14AACC0B60A15EA66DA1F75 /* Pods-TaskChef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TaskChef/TaskChef.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"TaskChef/Preview Content\"";
-				DEVELOPMENT_TEAM = TZ7ZH7F8JA;
+				DEVELOPMENT_TEAM = 7PW4JL84ET;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TaskChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Thomas-Bahmandeji.TaskChef";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasBahmandeji.TaskChef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -708,16 +738,18 @@
 			baseConfigurationReference = BAB01AF6D59DAEE9756B86FB /* Pods-TaskChef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TaskChef/TaskChef.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"TaskChef/Preview Content\"";
-				DEVELOPMENT_TEAM = TZ7ZH7F8JA;
+				DEVELOPMENT_TEAM = 7PW4JL84ET;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TaskChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Thomas-Bahmandeji.TaskChef";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasBahmandeji.TaskChef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

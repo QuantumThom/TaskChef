@@ -35,7 +35,10 @@ class SessionStore : ObservableObject {
     @Published var session: User? {didSet {self.didChange.send() }}
     var handle: AuthStateDidChangeListenerHandle?
     
-    // PROBLEM IS PROBABLY HERE.
+    ///Colors
+    let ThemeColor = Color(red: 0.3, green: 0.6, blue: 0.99)
+    let MainTheme = Color(red: 0.0, green: 0.67, blue: 0.97)
+    
     func listen () {
         // monitor authentication changes using firebase
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
@@ -84,11 +87,11 @@ class SessionStore : ObservableObject {
 }
 
 /// MODIFIERS
+
 struct SignInModifier: ViewModifier {
-    
     func body(content: Content) -> some View {
         return content
-            .padding(.all).font(.system(size: 18)).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.purple, lineWidth: 3)).foregroundColor(Color.purple).shadow(radius: 2)
+            .padding(.all).font(.system(size: 18)).border(Color.purple, width: 2).foregroundColor(Color.purple).shadow(radius: 2).frame(width: 350, height: 50)
     }
 }
 
@@ -120,3 +123,17 @@ struct ProfileMod: ViewModifier {
     }
 }
 
+
+//struct CustomTextField: View {
+//    var placeholder: Text
+//    @State var text: String
+//    var editingChanged: (Bool)->() = { _ in }
+//    var commit: ()->() = { }
+//
+//    var body: some View {
+//        ZStack(alignment: .leading) {
+//            if text.isEmpty { placeholder }
+//            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+//        }
+//    }
+//}

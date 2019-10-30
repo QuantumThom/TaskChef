@@ -16,7 +16,8 @@ struct SignUpView: View {
     @State var error = false
     
     @EnvironmentObject var session: SessionStore
-    
+    @Environment(\.presentationMode) var presentationMode
+
     func signUp () {
         print("sign up worked")
         loading = true
@@ -32,21 +33,35 @@ struct SignUpView: View {
             }
         }
     }
+    
     var body: some View{
-        VStack {
-            TextField("email", text: $email).modifier(SignInModifier())
-            
-            SecureField("create a password", text: $password).modifier(SignInModifier())
-            
-            if (error) {
-                Text("Invalid email address.").foregroundColor(Color.red)
-            }
-                Button(action: signUp){
-                    Text("Register").modifier(LogInModifier())
+        ZStack{
+            //RGB: (101,119,134) - Dark Gray
+            //RGB: (29,161,242) - Light Blue (Twitter).
+            //Color(red: 0.3, green: 0.6, blue: 0.99).edgesIgnoringSafeArea(.all)
+            session.ThemeColor.edgesIgnoringSafeArea(.all)
+            VStack {
+                
+                Text("Register").font(.largeTitle).offset(y: 0)
+                
+                Button(action: {}){
+                    TextField("email", text: $email)
+                    }.modifier(SignInModifier()).padding()
+                
+                Button(action:{}){
+                    SecureField("create a password", text: $password)
+                }.modifier(SignInModifier()).padding(.bottom)
+                
+                if (error) {
+                    Text("Invalid email address or password.").foregroundColor(Color.red)
                 }
-            
+                
+                Button(action: signUp){
+                    Text("Sign up").modifier(LogInModifier())
+                }
+                
+            }
         }
-        
     }
 }
 

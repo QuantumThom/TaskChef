@@ -15,6 +15,7 @@ struct SignInView : View {
     @State var password: String = ""
     @State var loading = false
     @State var error = false
+    
     @State var signUpSheet = false
 
     @EnvironmentObject var session: SessionStore
@@ -35,18 +36,24 @@ struct SignInView : View {
 
     var body: some View {
         NavigationView {
-            ZStack {
+            ZStack{
+                session.MainTheme.edgesIgnoringSafeArea(.all)
 //                Color.black
 //                    .edgesIgnoringSafeArea(.all)
                 VStack {
                     Spacer()
+                    /// Sign in section
                     Button(action: {}){
                         Text("Welcome!").font(.system(size: 32)).font(.title)
                     }
                     
-                    TextField("email address", text: $email).modifier(SignInModifier())
-                    
-                    SecureField("Password", text: $password).modifier(SignInModifier())
+                    Button(action: {}){
+                        TextField("email", text: $email)
+                }.modifier(SignInModifier()).disableAutocorrection(true).keyboardType(.emailAddress).padding()
+        
+                    Button(action: {}){
+                        SecureField("password", text: $password)
+                    }.modifier(SignInModifier()).disableAutocorrection(true)
                     
                     if (error) {
                         Text("Invalid Username or Password").foregroundColor(Color.red)
@@ -56,11 +63,15 @@ struct SignInView : View {
                         Text("Log in").modifier(LogInModifier())
                     }
                     Text("or").padding(.top).foregroundColor(Color.gray)
+                    
+                    ///Google SignIn
                     //calls google sign in button and determines size with frame
                     Google()
                         .frame(width: 370, height: 150)
                     
                     Spacer()
+                    
+                    /// Sign up section
                     HStack {
                         Text("Dont have an account? ")
                         Button(action: {
@@ -73,11 +84,11 @@ struct SignInView : View {
                     }.padding()
                 }.padding()
             }
-        }
+    }
     }
 }
 
-//Google sign in button
+///Google sign in button
 struct Google: UIViewRepresentable{
     func makeUIView(context: UIViewRepresentableContext<Google>) ->
         GIDSignInButton{
